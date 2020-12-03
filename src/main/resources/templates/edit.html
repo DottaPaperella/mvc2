@@ -9,7 +9,9 @@
 <h1>Edit a record</h1>
 
 <form action="update" method="post">
-    <div>TODO: display all the data in text fields</div>
+    Name:<input type="text" name="firstname" th:value="${person.firstName}"><br>
+    Surname:<input type="text" name="lastname" th:value="${person.lastName}"><br>
+    ID:<input type="number" name="id" th:value="${person.id}" readonly><br>
     <input type="submit" />
 </form>
 

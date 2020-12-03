@@ -7,10 +7,29 @@
 
 <body>
 <h1>Detail of person:</h1>
-<div>TODO: implement show details </div>
+<div>
+    // Il link serve per la licenza dell'immagine. Non ha alcuno scopo per quanto riguarda l'elaborato.
+    <a title="Google, Chromium project, BSD &lt;http://opensource.org/licenses/bsd-license.php&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Profile_avatar_placeholder_large.png">
+        <img width="256" alt="Profile avatar placeholder large" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png">
+    </a>
+    <table>
+        <tr>
+            <td>ID:</td>
+            <td th:text="${person.id}">42</td>
+        </tr>
+        <tr>
+            <td>Firstname:</td>
+            <td th:text="${person.firstName}">Chandler</td>
+        </tr>
+        <tr>
+            <td>Lastname:</td>
+            <td th:text="${person.lastName}">Bing</td>
+        </tr>
+    </table>
+</div>
 
-<a href=""> edit </a><br>
-<a href=""> delete </a><br>
+<a href="" th:href="@{edit(id=${person.id})}"> edit </a><br>
+<a href="" th:href="@{delete(id=${person.id})}"> delete </a><br>
 <a href="list"> Show the list </a>
 
 </body>
